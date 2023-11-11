@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Vehicle Value Predictor</title>
+  <link rel="shortcut icon" href="/static/img/dp2233.jpg">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+<body>
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="fade-in">
+
+        <div class="wrapper">
+          <div class="title">Vehicle Value Predictor</div>
+          <form action="/" method="POST">
+              <div class="form">
+                  <div class="inputfield">
+                      <label for="medication">Medication</label>
+                      <input class="input" type="text" id="medication" name="medication" required>
+                  </div>
+                  <div class="valim">
+                    <p id="validationMessage"></p>
+                    <script>
+                        document.getElementById("medication").addEventListener("input", validateInput);
+                
+                        function validateInput() {
+                            var yearInput = document.getElementById("medication").value;
+                            var validationMessage = document.getElementById("validationMessage");
+                
+                            if (yearInput === "") {
+                                validationMessage.textContent;
+                            } else if (!/^(201[2-9]|2020)$/.test(yearInput)) {
+                                validationMessage.textContent = "Please enter a year between 2012 and 2020.";
+                            } else {
+                                validationMessage.textContent = "";
+                            }
+                        }
+                    </script>
+                    </div>
+                  <div class="inputfield">
+                      <label for="company">Company</label>
+                      <div class = "custom_select">
+                          <select name="company" id="company">
+                              <option value="" selected hidden>Select</option>
+                              <option value="Aston Martin">Aston Martin</option>
+                              <option value="Cadilla">Cadilla</option>
+                              <option value="Chevrolet">Chevrolet</option>
+                              <option value="Dodge">Dodge</option>
+                              <option value="Fiat">Fiat</option>
+                              <option value="Honda">Honda</option>
+                              <option value="Hummer">Hummer</option>
+                              <option value="Jaguar">Jaguar</option>
+                              <option value="Land Rover">Land Rover</option>
+                              <option value="Mazda">Mazda</option>
+                              <option value="Mercedes-Benz">Mercedes-Benz</option>
+                              <option value="Nissan">Nissan</option>
+                              <option value="Other">Other</option>
+                              <option value="Pagani">Pagani</option>
+                              <option value="Peugeot">Peugeot</option>
+                              <option value="Ram">Ram</option>
+                              <option value="Subaru">Subaru</option>
+                              <option value="Suzuki">Suzuki</option>
+                              <option value="Tesla">Tesla</option>
+                              <option value="Toyota">Toyota</option>
+                              <option value="Volvo">Volvo</option>
+                          </select>
+                  </div>
+                  </div>
+                  <div class="inputfield">
+                      <label for="condition">Condition</label>
+                      <div class="custom_select">
+                          <select name="condition" id="condition">
+                              <option value="" selected hidden>Select</option>
+                              <option value="Brandnew">Brand New</option>
+                              <option value="registered">Registered</option>
+                              <option value="unregistered">Unregistered</option>
+                              <option value="recondition">Recondition</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="inputfield">
+                      <label for="fuel">Fuel</label>
+                      <div class="custom_select">
+                          <select name="fuel" id="fuel" >
+                              <option value="" selected hidden>Select</option>
+                              <option value="Petrol">Petrol</option>
+                              <option value="Diesel">Diesel</option>
+                              <option value="Electric">Electric</option>
+                              <option value="Hybrid">Hybrid</option>
+                              <option value="Gas">Gas</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="inputfield">
+                      <label for="performance_type">Performance Type</label>
+                      <div class="custom_select">
+                          <select name="performance_type" id="performance_type">
+                              <option value="" selected hidden>Select</option>
+                              <option value="Super">Super</option>
+                              <option value="Sports">Sports</option>
+                              <option value="Hyper">Hyper</option>
+                              <option value="Plug-in Hybrid (PHEV)">Plug-in Hybrid (PHEV)</option>
+                          </select>
+                      </div>
+                  </div>                
+                  <div class="inputfield">
+                      <label for="drive_type">Drive Type</label>
+                      <div class="custom_select">
+                          <select name="drive_type" id="drive_type" >
+                              <option value="" selected hidden>Select</option>
+                              <option value="Drive Type_All-Wheel Drive (AWD)">All-Wheel Drive (AWD)</option>
+                              <option value="Drive Type_Four-Wheel Drive (4WD)">Four-Wheel Drive (4WD)</option>
+                              <option value="Drive Type_Front-Wheel Drive (FWD)">Front-Wheel Drive (FWD)</option>
+                              <option value="Drive Type_Rear-Wheel Drive (RWD)">Rear-Wheel Drive (RWD)</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="inputfield">
+                      <label for="country">Country</label>
+                      <div class="custom_select">
+                          <select name="country" id="country" >
+                              <option value="" selected hidden>Select</option>
+                              <option value="Country_American">American</option>
+                              <option value="Country_Asian">Asian</option>
+                              <option value="Country_British">British</option>
+                              <option value="Country_European">European</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="inputfield">
+                      <label for="body_style">Body Style</label>
+                      <div class="custom_select">
+                          <select name="body_style" id="body_style" >
+                              <option value="" selected hidden>Select</option>
+                              <option value="Coupe-suv">Coupe-SUV</option>
+                              <option value="SUV">SUV</option>
+                              <option value="Convertible">Convertible</option>
+                              <option value="Crossover">Crossover</option>
+                              <option value="Estate/Wagon">Estate/Wagon</option>
+                              <option value="Hatchback">Hatchback</option>
+                              <option value="Pickup Truck">Pickup Truck</option>
+                              <option value="Roadster">Roadster</option>
+                              <option value="Minivan">Minivan</option>
+                              <option value="Sedan">Sedan</option>
+                          </select>
+                      </div>
+                  </div>
+                  
+                  <div class="inputfield">
+                      <input class="btn" type="submit" value="Check Price">
+                  </div>
+              </div>
+          </form>
+          <div class="result">
+            {% if pred_value != 0 %}
+            <p>Estimated Price : USD {{pred_value}}</p>
+            {% endif %}
+        </div>
+        
+        
+        <div><center><label>-Dreams Live the Vehcle for life-</label></center></div>
+
+      </div>
+      
+
+      </div>
+
+    </section><!-- End Cta Section -->
+
+    <div><center><label>-THILINA SANDAMAL-</label></center></div>
+
+
+</body>
+
+</html>
