@@ -1,8 +1,0 @@
-.\Activate.ps1
-
-
-
-Algorithm- Random Forest Regressor
-Build a website using the Flask web framework
-
-THILINA S.
